@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/intel-8086-simulator/static/css/main.a5593a05.chunk.css",
+    "main.js": "/intel-8086-simulator/static/js/main.855c4ebb.chunk.js",
+    "main.js.map": "/intel-8086-simulator/static/js/main.855c4ebb.chunk.js.map",
+    "runtime-main.js": "/intel-8086-simulator/static/js/runtime-main.470bcc90.js",
+    "runtime-main.js.map": "/intel-8086-simulator/static/js/runtime-main.470bcc90.js.map",
+    "static/js/2.56036511.chunk.js": "/intel-8086-simulator/static/js/2.56036511.chunk.js",
+    "static/js/2.56036511.chunk.js.map": "/intel-8086-simulator/static/js/2.56036511.chunk.js.map",
+    "index.html": "/intel-8086-simulator/index.html",
+    "precache-manifest.af12710f7d019ab6f7c912781e2ba40a.js": "/intel-8086-simulator/precache-manifest.af12710f7d019ab6f7c912781e2ba40a.js",
+    "service-worker.js": "/intel-8086-simulator/service-worker.js",
+    "static/css/main.a5593a05.chunk.css.map": "/intel-8086-simulator/static/css/main.a5593a05.chunk.css.map",
+    "static/js/2.56036511.chunk.js.LICENSE.txt": "/intel-8086-simulator/static/js/2.56036511.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.470bcc90.js",
+    "static/js/2.56036511.chunk.js",
+    "static/css/main.a5593a05.chunk.css",
+    "static/js/main.855c4ebb.chunk.js"
+  ]
+}
