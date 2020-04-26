@@ -1,1 +1,1 @@
-**Basic simulator of intel 8086**
+**Simulator of intel 8086**
