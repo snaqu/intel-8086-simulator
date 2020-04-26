@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Input from '../Forms/Input';
 
-const Registers = ({
+const Commands = ({
   ax,
   bx,
   cx,
@@ -16,7 +16,7 @@ const Registers = ({
 
   return (
     <>
-      <h3 className="my-5">Rejestry</h3>
+      <h3 className="my-5">Registers</h3>
       <Input 
         label="AX"
         value={ax}
@@ -41,15 +41,15 @@ const Registers = ({
   )
 }
 
-Registers.propTypes = {
-  ax: PropTypes.string.isRequired,
-  bx: PropTypes.string.isRequired,
-  cx: PropTypes.string.isRequired,
-  dx: PropTypes.string.isRequired,
+Commands.propTypes = {
+  ax: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  bx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  cx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  dx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   setAx: PropTypes.func.isRequired,
   setBx: PropTypes.func.isRequired,
   setCx: PropTypes.func.isRequired,
   setDx: PropTypes.func.isRequired,
 }
 
-export default Registers
+export default Commands

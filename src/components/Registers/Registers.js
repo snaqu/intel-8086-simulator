@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types'
 import cx from 'classnames';
 
 import { commandOptions, paramsOptions } from '../../utils/selectOptions';
@@ -12,24 +13,24 @@ const Registers = ({ onSubmit }) => {
 
   return (
     <form onSubmit={onSubmit}>
-      <h3 className="my-5">Komendy</h3>
+      <h3 className="my-5">Commands</h3>
       <Select
         value={command} 
-        label="Komenda"
+        label="Command"
         name="command"
         onChange={setCommand}
         options={commandOptions}
       />
       <Select
         value={firstParam} 
-        label="Parametr 1"
+        label="Parameter 1"
         name="param1"
         onChange={setFirstParam}
         options={paramsOptions}
       />
       <Select
         value={secondParam} 
-        label="Parametr 2"
+        label="Parameter 2"
         name="param2"
         onChange={setSecondParam}
         options={paramsOptions}
@@ -45,6 +46,10 @@ const Registers = ({ onSubmit }) => {
       </button>
     </form>
   )
-}
+};
+
+Registers.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default Registers

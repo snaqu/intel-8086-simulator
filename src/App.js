@@ -3,26 +3,10 @@ import React, { useState } from 'react'
 import Registers from './components/Registers';
 import Commands from './components/Commands';
 
-const moveParameters = (form, setters, getters) => {
-  const mappedOptions = {
-    AX: 'setAx',
-    BX: 'setBx',
-    CX: 'setCx',
-    DX: 'setDx',
-  };
-  
-  const firstParam = form.get('param1');
-  const secondParam = form.get('param2');
-  
-  // wartość z pola 1 jest przepisywana do pola 2
-  // wartość z pola 1 wtedy znika
-
-  const pickedFirstParam = mappedOptions[firstParam];
-  const pickedSecondParam = mappedOptions[secondParam];
-  
-  setters[pickedFirstParam](getters[secondParam.toLowerCase()]);
-  setters[pickedSecondParam](getters[firstParam.toLowerCase()]);
-};
+import {
+  moveParameters,
+  addSubParameters,
+} from './utils/parametersSet';
 
 const App = () => {
   const [ax, setAx] = useState('');
@@ -32,14 +16,25 @@ const App = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    
+    if (ax === '' || bx === '' || cx === '' || dx === '') {
+      return alert('Complete all text fields in the register');
+    }
+
     const data = new FormData(e.target);
     const setters = { setAx, setBx, setCx, setDx };
     const getters = { ax, bx, cx, dx};
 
     switch (data.get('command')) {
       case 'MOV':
-         return moveParameters(data, setters, getters);     
+         return moveParameters(data, setters, getters);      
     
+      case 'ADD': 
+        return addSubParameters(data, setters, getters);
+      
+      case 'SUB': 
+        return addSubParameters(data, setters, getters, true);
+      
       default:
         break;
     }

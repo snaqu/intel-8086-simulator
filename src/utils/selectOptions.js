@@ -1,5 +1,7 @@
 const commandOptions = [
   { id: 1, name: 'MOV' },
+  { id: 2, name: 'ADD' },
+  { id: 3, name: 'SUB' },
 ];
 
 const paramsOptions = [
