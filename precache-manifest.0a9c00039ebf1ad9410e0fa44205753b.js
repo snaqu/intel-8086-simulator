@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b81785d24e1eeb4f2844d2986aa51f36",
+    "revision": "2c27abc65c4cd406abeedeb976fa6ac0",
     "url": "/intel-8086-simulator/index.html"
   },
   {
-    "revision": "0006c79c3cd71210dbc3",
+    "revision": "0adcbc8a02467370584f",
     "url": "/intel-8086-simulator/static/css/main.a5593a05.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/intel-8086-simulator/static/js/2.56036511.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0006c79c3cd71210dbc3",
-    "url": "/intel-8086-simulator/static/js/main.855c4ebb.chunk.js"
+    "revision": "0adcbc8a02467370584f",
+    "url": "/intel-8086-simulator/static/js/main.4aa4c094.chunk.js"
   },
   {
     "revision": "1254c3a80fb350511813",
