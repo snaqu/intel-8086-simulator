@@ -42,7 +42,7 @@ const Registers = ({ onSubmit }) => {
           "cursor-not-allowed opacity-50": firstParam === secondParam,
         })}
       >
-        Wykonaj
+        Submit
       </button>
     </form>
   )
