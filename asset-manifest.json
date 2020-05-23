@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/intel-8086-simulator/static/css/main.a5593a05.chunk.css",
-    "main.js": "/intel-8086-simulator/static/js/main.4aa4c094.chunk.js",
-    "main.js.map": "/intel-8086-simulator/static/js/main.4aa4c094.chunk.js.map",
+    "main.js": "/intel-8086-simulator/static/js/main.af8ce445.chunk.js",
+    "main.js.map": "/intel-8086-simulator/static/js/main.af8ce445.chunk.js.map",
     "runtime-main.js": "/intel-8086-simulator/static/js/runtime-main.470bcc90.js",
     "runtime-main.js.map": "/intel-8086-simulator/static/js/runtime-main.470bcc90.js.map",
     "static/js/2.56036511.chunk.js": "/intel-8086-simulator/static/js/2.56036511.chunk.js",
     "static/js/2.56036511.chunk.js.map": "/intel-8086-simulator/static/js/2.56036511.chunk.js.map",
     "index.html": "/intel-8086-simulator/index.html",
-    "precache-manifest.0a9c00039ebf1ad9410e0fa44205753b.js": "/intel-8086-simulator/precache-manifest.0a9c00039ebf1ad9410e0fa44205753b.js",
+    "precache-manifest.7a691fc540cd6adc15ff68dbee8980d6.js": "/intel-8086-simulator/precache-manifest.7a691fc540cd6adc15ff68dbee8980d6.js",
     "service-worker.js": "/intel-8086-simulator/service-worker.js",
     "static/css/main.a5593a05.chunk.css.map": "/intel-8086-simulator/static/css/main.a5593a05.chunk.css.map",
     "static/js/2.56036511.chunk.js.LICENSE.txt": "/intel-8086-simulator/static/js/2.56036511.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.470bcc90.js",
     "static/js/2.56036511.chunk.js",
     "static/css/main.a5593a05.chunk.css",
-    "static/js/main.4aa4c094.chunk.js"
+    "static/js/main.af8ce445.chunk.js"
   ]
 }
