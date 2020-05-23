@@ -6,7 +6,7 @@ import Input from '../Forms/Input';
 const Commands = ({ chartOfRegisters }) => (
   <>
     <h3 className="my-5">Registers</h3>
-    {chartOfRegisters.map(({ label, value, onChange}) => (
+    {chartOfRegisters.map(({ label, value, onChange }) => (
       <Input
         key={label}
         label={label}

@@ -5,6 +5,9 @@ const mappedOptions = {
   DX: 'setDx',
 };
 
+const parseToHex = (number) => parseInt(number, 2);
+const parseToBinary = (number) => number.toString(2);
+
 const moveParameters = (form, setters, getters) => {
   const firstParam = form.get('param1');
   const secondParam = form.get('param2');
@@ -21,14 +24,14 @@ const addSubParameters = (form, setters, getters, isSubtraction = false) => {
   const setterName = mappedOptions[firstParam];
   const pickedSetter = setters[setterName];
 
-  const registerFirstParamValue = Number(getters[firstParam.toLowerCase()]);
-  const registerSecondParamValue = Number(getters[secondParam.toLowerCase()]);
+  const registerFirstParamValue = parseToHex(getters[firstParam.toLowerCase()]);
+  const registerSecondParamValue = parseToHex(getters[secondParam.toLowerCase()]);
 
   const operation = !isSubtraction
-    ? registerFirstParamValue + registerSecondParamValue
-    : registerFirstParamValue - registerSecondParamValue;
+    ? parseToBinary(registerFirstParamValue + registerSecondParamValue)
+    : parseToBinary(registerFirstParamValue - registerSecondParamValue);
 
-  pickedSetter(operation);
+  pickedSetter(String(operation));
 };
 
 export { moveParameters, addSubParameters };
