@@ -15,27 +15,27 @@ const Registers = ({ onSubmit }) => {
     <form onSubmit={onSubmit}>
       <h3 className="my-5">Commands</h3>
       <Select
-        value={command} 
+        value={command}
         label="Command"
         name="command"
         onChange={setCommand}
         options={commandOptions}
       />
       <Select
-        value={firstParam} 
+        value={firstParam}
         label="Parameter 1"
         name="param1"
         onChange={setFirstParam}
         options={paramsOptions}
       />
       <Select
-        value={secondParam} 
+        value={secondParam}
         label="Parameter 2"
         name="param2"
         onChange={setSecondParam}
         options={paramsOptions}
       />
-      <button 
+      <button
         disabled={firstParam === secondParam}
         type="submit"
         className={cx("bg-transparent mt-6 w-full text-blue-700 font-semibold py-3 px-4 border border-blue-500 rounded", {

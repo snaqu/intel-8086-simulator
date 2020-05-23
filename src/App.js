@@ -16,9 +16,15 @@ const App = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    
-    if (ax === '' || bx === '' || cx === '' || dx === '') {
+
+    const registers = [ax, bx, cx, dx];
+
+    if (registers.some((item) => item === '')) {
       return alert('Complete all text fields in the register');
+    }
+
+    if (registers.some((item) => !/\b[01]+\b/.test(item))) {
+      return alert('Incorrect field format. Use binary code');
     }
 
     const data = new FormData(e.target);
@@ -27,38 +33,34 @@ const App = () => {
 
     switch (data.get('command')) {
       case 'MOV':
-         return moveParameters(data, setters, getters);      
-    
-      case 'ADD': 
+         return moveParameters(data, setters, getters);
+
+      case 'ADD':
         return addSubParameters(data, setters, getters);
-      
-      case 'SUB': 
+
+      case 'SUB':
         return addSubParameters(data, setters, getters, true);
-      
+
       default:
         break;
     }
   };
- 
+
+  const chartOfRegisters = [
+    { label: 'AX', value: ax, onChange: setAx },
+    { label: 'BX', value: bx, onChange: setBx },
+    { label: 'CX', value: cx, onChange: setCx },
+    { label: 'DX', value: dx, onChange: setDx },
+  ];
+
   return (
     <div className="container mx-auto px-4">
       <div className="flex mb-4">
         <div className="w-1/2 mx-2">
-          <Commands
-            ax={ax}
-            bx={bx}
-            cx={cx}
-            dx={dx}
-            setAx={setAx}
-            setBx={setBx}
-            setCx={setCx}
-            setDx={setDx}
-          />
+          <Commands chartOfRegisters={chartOfRegisters} />
         </div>
         <div className="w-1/2 mx-2">
-          <Registers 
-            onSubmit={onSubmit} 
-          />
+          <Registers onSubmit={onSubmit} />
         </div>
       </div>
     </div>
