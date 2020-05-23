@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/intel-8086-simulator/precache-manifest.7a691fc540cd6adc15ff68dbee8980d6.js"
+  "/intel-8086-simulator/precache-manifest.4b173eed3ff50f4b43db0cdf4d972ae2.js"
 );
 
 self.addEventListener('message', (event) => {
